@@ -3,3 +3,68 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+html,
+cody {
+    max-width: 100%;
+    /* font-family:; */
+}
+
+.header {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    height: 120px;
+    background-color: aqua;
+}
+
+.logo-home {
+    width: 150px;
+    height: auto;
+    background: blue;
+    margin: 0 40px;
+}
+
+.nav-header {
+    margin: 45px auto;
+    text-align: center;
+}
+
+.nav-header a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+.nav-header a:before,
+.nav-header a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.nav-header a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+
+.nav-header a:after {
+    bottom: 0px;
+    transform: translateY(-10px);
+}
+
+.nav-header a:hover:before,
+.nav-header a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
