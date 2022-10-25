@@ -10,13 +10,17 @@ footer {
     text-align: center;
 }
 
-.nav-a a {
-    color: rgb(255, 255, 255);
-    text-decoration: none;
-    font-size: 36pt Arial;
-    margin: 40px 75px;
+.nav-footer {
+    padding: 40px 0;
 }
 
-.nav-a a:hover {
-    color: #f8f8f8;
+.nav-footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 75px;
+}
+
+.nav-footer a:hover {
+    color: #000000;
 }
