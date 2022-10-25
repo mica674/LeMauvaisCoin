@@ -10,6 +10,11 @@
 </head>
 
 <body>
+    <nav class="nav-float">
+        <a href="facebook.com" class="logo-fb"><img src="public/assets/img/icon_facebook.png" alt="logo facebook"></a>
+        <a href="twitter.com" class="logo-twitter"><img src="public/assets/img/icon_twitter.png" alt="logo twitter"></a>
+        <a href="instagram.com" class="logo-insta"><img src="public/assets/img/icon_instagram.png" alt="logo instagram"></a>
+    </nav>
     <section class="top-section">
         <h1 class="top-section-h1">La Bourse aux produits High Tech</h1>
         <div class="carousel">
@@ -22,6 +27,86 @@
                 <div class="item"></div>
             </div>
         </div>
+    </section>
+    <section class="form-evenement">
+        <h2 class="form-evenement-h2">Réserves ta place !</h2>
+        <p class="form-descriptif">
+            La bourse aux produits High Tech est un tout nouveau rendez-vous avec les technologies d'hier et d'aujourd'hui.<br>
+            Ne t'inquiètes pas, la police municipale sera présente sur le lieu et fouillera les sacs avant de passer les barrières de sécurité.</p>
+        <form method="get" class="form-main">
+            <div>
+                <label for="lastname" class="lastname">
+                    Nom<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="lastname"
+                    placeholder="Nom"
+                    name="lastname"
+                    required>
+                <label for="firstname" class="firstname">
+                    Prénom<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="firstname"
+                    placeholder="Prénom"
+                    name="firstname"
+                    required><br>
+                <label for="birthDay" class="birthDay">
+                    Date de naissance<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="birthDay"
+                    placeholder="11/11/2022"
+                    name="birthDay"><br>
+                <label for="adress" class="adress">
+                    Adresse<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="adress"
+                    placeholder="70, rue des jacobins"
+                    name="adress"
+                    width="800px"
+                    required>
+                <label for="zipCode" class="zipCode">
+                    Code Postal<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="zipCode"
+                    placeholder="80000"
+                    name="zipCode"
+                    required>
+                <label for="town" class="town">
+                    Ville<span class="required">*</span>
+                </label>
+                <input 
+                    type="text"
+                    id="town"
+                    placeholder="Amiens"
+                    name="town"
+                    required><br>
+                <label for="email" class="email">
+                    Email<span class="required">*</span>
+                </label>
+                <input 
+                    type="email"
+                    id="email"
+                    placeholder="contact@lamanu.fr"
+                    name="email">
+            </div>
+            <div class="submit">
+                <button 
+                    type="submit"
+                    name="submit"
+                    id="submit">
+                Reserver</button>
+            </div>
+        </form>
+        <p class="form-p-bottom">Rendez-vous le 11 novembre de 9h à 17h</p>
     </section>
 
 

@@ -19,6 +19,22 @@ body {
     text-align: center;
 }
 
+.form-evenement-h2{
+    font-size: 32px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 225px;
+}
+
+/* navigation flottante réseaux sociaux */
+.nav-float {
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    position: fixed;
+    margin: 200px 20px;
+}
+
 /* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
 .carousel {
     height: 520px;
@@ -107,4 +123,69 @@ input:nth-of-type(3) {
 
 input:nth-of-type(3):checked~.carousel-image {
     --position: 3;
+}
+
+.form-descriptif{
+    font-size: 16px;
+    margin-left: 225px;
+    font-family: Cambria;
+    color: #003A7E;
+}
+
+.form-main{
+    margin-left: 100px;
+}
+
+label{
+    font-size: 16px;
+}
+
+.required{
+    color: red;
+}
+
+.lastname{
+    margin: 48px 28px 0 347px;
+}
+
+input#lastname{
+    width: 320px;
+    height: 42px;
+}
+
+lastname{
+
+}
+.firstname{
+    margin: 48px 28px 0 63px;
+}
+
+.birthDay{
+    margin: ;
+}
+
+.adress{
+    margin: ;
+}
+
+.zipCode{
+    margin: ;
+}
+
+.town{
+    margin: ;
+}
+
+.email{
+    margin: ;
+}
+
+
+.submit{
+    margin-left: -100px;
+    text-align: center;
+}
+
+.form-p-bottom{
+    text-align: center;
 }
