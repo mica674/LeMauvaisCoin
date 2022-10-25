@@ -19,20 +19,95 @@ body {
     text-align: center;
 }
 
-.form-evenement-h2{
+.form-evenement-h2 {
     font-size: 32px;
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left: 225px;
 }
 
+.map {
+    color: #003A7E;
+}
+
+.map h2 {
+    font-size: 32px;
+    margin-top: 85px;
+    margin-left: 230px;
+}
+
+
+.map p {
+    font-size: 24px;
+    margin-top: 55px;
+    text-align: center;
+}
+
+.iframe-map {
+    margin: 65px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.home-infos {
+    color: #003A7E;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #F8F8F8;
+}
+
+.text-infos {
+    margin: 230px;
+    margin-top: 65px;
+    margin-bottom: 135px;
+}
+
+.text-infos h2 {
+    font-size: 32px;
+    margin-bottom: 65px;
+}
+
+.home-infos p {
+    font-size: 24px;
+}
+
+.more-infos {
+    color: #003A7E;
+    display: flex;
+    flex-direction: column;
+    margin: 230px;
+    margin-top: 65px;
+}
+
+.text-more-infos h2 {
+    font-size: 32px;
+    margin-bottom: 65px;
+}
+
+.text-more-infos p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
 /* navigation flottante réseaux sociaux */
+
+
+/* PROBLEME D'ALIGNEMENT VERTICALE marge en haut ??? */
+
+
 .nav-float {
     display: flex;
     flex-direction: column;
     width: 65px;
+    height: calc(100% - 50px);
     position: fixed;
-    margin: 200px 20px;
+    margin: 0 20px;
+    justify-content: center;
+}
+
+.nav-float img {
+    width: 40px;
+    height: 40px;
 }
 
 /* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
@@ -125,67 +200,70 @@ input:nth-of-type(3):checked~.carousel-image {
     --position: 3;
 }
 
-.form-descriptif{
+.form-evenement {
+    background-color: #F8F8F8;
+}
+
+.form-descriptif {
     font-size: 16px;
     margin-left: 225px;
     font-family: Cambria;
     color: #003A7E;
 }
 
-.form-main{
+.form-main {
     margin-left: 100px;
 }
 
-label{
+label {
     font-size: 16px;
 }
 
-.required{
+.required {
     color: red;
 }
 
-.lastname{
+.lastname {
     margin: 48px 28px 0 347px;
 }
 
-input#lastname{
+input#lastname {
     width: 320px;
     height: 42px;
 }
 
-lastname{
+lastname {}
 
-}
-.firstname{
+.firstname {
     margin: 48px 28px 0 63px;
 }
 
-.birthDay{
+.birthDay {
     margin: ;
 }
 
-.adress{
+.adress {
     margin: ;
 }
 
-.zipCode{
+.zipCode {
     margin: ;
 }
 
-.town{
+.town {
     margin: ;
 }
 
-.email{
+.email {
     margin: ;
 }
 
 
-.submit{
+.submit {
     margin-left: -100px;
     text-align: center;
 }
 
-.form-p-bottom{
+.form-p-bottom {
     text-align: center;
 }
