@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    width: 100vw;
+    height: 100px;
+    background-color: #003a7e;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16pt Arial;
+    padding: 0 75px;
+    margin-top: 40px;
+}
