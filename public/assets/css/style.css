@@ -1,6 +1,8 @@
 * {
     margin: 0;
     padding: 0;
+    /* box-sizing:border-box 
+    permet aux enfants d'une div de ne pas dépasser son parent en width et heigh */
     box-sizing: border-box;
 }
 
@@ -10,6 +12,16 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Attribut d'une typographie Raleway aux h1 et h2 */
+h1,
+h2 {
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #003A7E;
+}
+
+
+/* HEADER */
 .header {
     width: 100vw;
     display: flex;
@@ -19,9 +31,11 @@ body {
 }
 
 .header-logo img {
+    position: absolute;
+    float: left;
     width: 130px;
     height: 130px;
-    margin: auto 50px;
+    margin: auto 80px;
 }
 
 .nav-header {
@@ -34,12 +48,14 @@ body {
     text-decoration: none;
     font: 25px Arial;
     margin: 0px 10px;
-    padding: 10px 40px;
+    padding: 0 40px;
     position: relative;
     z-index: 0;
     cursor: pointer;
 }
 
+/* ::before et ::after permet de rajouter du css sans passer par le html
+        Ici une ligne blanche pendant le hover */
 .nav-header a:before,
 .nav-header a:after {
     position: absolute;
@@ -68,23 +84,132 @@ body {
     transform: translateY(0px);
 }
 
-/* Attribut d'une typographie Raleway */
-h1, h2{
-    font-family: Raleway, Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #003A7E;
+
+/* NAVIGATION FIXER A GAUCHE DES RESEAUX SOCIAUX */
+.nav-float {
+    display: flex;
+    flex-direction: column;
+    width: 65px;
+    height: calc(100% - 200px);
+    position: fixed;
+    margin: 0 20px;
+    justify-content: center;
 }
 
-label{
-    font-family: Raleway, Arial, Helvetica, sans-serif;
-    color: #003A7E;
-
+.nav-float img {
+    width: 40px;
+    height: 40px;
 }
 
+
+/* TOP SECTION H1 ET CARROUSEL */
 .top-section-h1 {
     font-size: 36px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
+.carousel {
+    height: 520px;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 500px 20px;
+    grid-template-columns: 1fr 30px 30px 30px 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.carousel-img {
+    grid-row: 1 / 2;
+    grid-column: 1 / 8;
+    width: 100vw;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 600px;
+    /* propriétés persos pour être réutilisé grâce à var */
+    --items: 3;
+    --middle: 3;
+    --position: 1;
+    /* pointer sur none pour que les images ne semblent pas cliquable */
+    pointer-events: none;
+}
+
+div.item {
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    /* Ajout de propriétés persos */
+    --r: calc(var(--position) - var(--offset));
+    --abs: max(calc(var(--r) * -1), var(--r));
+    transition: all 0.25s linear;
+    /* definition du tranform des images sur les côtés de celle principale */
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+    z-index: calc((var(--position) - var(--abs)));
+}
+
+/* On definit les images des items 1 2 et 3 */
+div.item:nth-of-type(1) {
+    --offset: 1;
+    background-image: url(../img/ordinateur_carrousel.jpg);
+    background-size: contain;
+}
+
+div.item:nth-of-type(2) {
+    --offset: 2;
+    background-image: url(../img/playstation_carrousel.jpg);
+    background-size: contain;
+}
+
+div.item:nth-of-type(3) {
+    --offset: 3;
+    background-image: url(../img/telephone_carrousel.jpg);
+    background-size: contain;
+}
+
+/* selection des inputs 1 2 et 3 pour les placer dans la grille*/
+input:nth-of-type(1) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+input:nth-of-type(1):checked~.carousel-img {
+    --position: 1;
+}
+
+input:nth-of-type(2) {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+/* Change la variable --position a 2 pour faire référence à la 2eme image */
+input:nth-of-type(2):checked~.carousel-img {
+    --position: 2;
+}
+
+input:nth-of-type(3) {
+    grid-column: 4 /5;
+    grid-row: 2/ 3;
+}
+
+input:nth-of-type(3):checked~.carousel-img {
+    --position: 3;
+}
+
+/* SECTION FORMULAIRE */
+/* Couleur de fond de la section du formulaire */
+.form-evenement {
+    background-color: #F8F8F8;
+    margin-top: 30px;
+    padding: 20px 0;
+}
+
+.form-h1 {
     text-align: center;
 }
 
@@ -93,6 +218,82 @@ label{
     margin: 50px 0 25px 225px;
 }
 
+.form-descriptif {
+    font-size: 16px;
+    margin: 0 200px 34px 225px;
+    font-family: Cambria;
+    color: #003A7E;
+}
+
+.form-main {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+}
+
+.formLeft,
+.formRight {
+    width: 50%;
+}
+
+label {
+    font-size: 16px;
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    color: #003A7E;
+}
+
+input {
+    margin-left: 28px;
+    margin-bottom: 21px;
+}
+
+input::placeholder {
+    font-style: italic;
+}
+
+.required {
+    color: red;
+}
+
+.lastname {
+    margin-left: 98px;
+}
+
+.adress {
+    margin-left: 74px;
+}
+
+#adress {
+    width: 300px;
+}
+
+.zipCode {
+    margin-left: 46px;
+}
+
+.email {
+    margin-left: 93px;
+}
+
+.firstname {
+    margin: 48px 0 0 21px;
+}
+
+.town {
+    margin-left: 46px;
+}
+
+#town {
+    margin-top: 83px;
+    margin-left: 28px;
+}
+
+#telNumber {
+    width: 95px;
+}
+
+
+/* SECTION MAP GOOGLE */
 .map {
     color: #003A7E;
 }
@@ -103,19 +304,21 @@ label{
     margin-left: 230px;
 }
 
-
 .map p {
     font-size: 24px;
     margin-top: 55px;
     text-align: center;
 }
 
+/* iframe permet d'incorporer la map google au siteweb */
 .iframe-map {
     margin: 65px 10px;
     display: flex;
     justify-content: center;
 }
 
+
+/* SECTION INFO COVID ET PLUS */
 .home-infos {
     color: #003A7E;
     display: flex;
@@ -124,13 +327,13 @@ label{
     padding: 0 230px;
 }
 
-.img-covid{
+.img-covid {
     width: 50%;
     height: 250px;
     margin-top: 65px;
 }
 
-.img-covid img{
+.img-covid img {
     width: 500px;
     margin-left: 62px;
 }
@@ -168,204 +371,10 @@ label{
     margin-bottom: 40px;
 }
 
-/* navigation flottante réseaux sociaux */
 
 
-/* PROBLEME D'ALIGNEMENT VERTICALE marge en haut ??? */
 
-
-.nav-float {
-    display: flex;
-    flex-direction: column;
-    width: 65px;
-    height: calc(100% - 100px);
-    position: fixed;
-    margin: 0 20px;
-    justify-content: center;
-}
-
-.nav-float img {
-    width: 40px;
-    height: 40px;
-}
-
-/* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
-.carousel {
-    height: 520px;
-    margin: 0;
-    display: grid;
-    grid-template-rows: 500px 20px;
-    grid-template-columns: 1fr 30px 30px 30px 1fr;
-    align-items: center;
-    justify-items: center;
-}
-
-.carousel-image {
-    grid-row: 1 / 2;
-    grid-column: 1 / 8;
-    width: 100vw;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    transform-style: preserve-3d;
-    perspective: 600px;
-    /* propriétés persos pour être réutilisé grâce a var */
-    --items: 3;
-    --middle: 3;
-    --position: 1;
-    /* pointer sur none pour que les images ne semblent pas cloquable */
-    pointer-events: none;
-}
-
-div.item {
-    position: absolute;
-    width: 600px;
-    height: 400px;
-    /* Ajout de propriétés persos */
-    --r: calc(var(--position) - var(--offset));
-    --abs: max(calc(var(--r) * -1), var(--r));
-    transition: all 0.25s linear;
-    /* definition du tranform (animation) des images */
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
-    z-index: calc((var(--position) - var(--abs)));
-}
-
-/* selection des images 1 2 et 3 */
-div.item:nth-of-type(1) {
-    --offset: 1;
-    background-image: url(../img/ordinateur_carrousel.jpg);
-    background-size: contain;
-}
-
-div.item:nth-of-type(2) {
-    --offset: 2;
-    background-image: url(../img/playstation_carrousel.jpg);
-    background-size: contain;
-}
-
-div.item:nth-of-type(3) {
-    --offset: 3;
-    background-image: url(../img/telephone_carrousel.jpg);
-    background-size: contain;
-}
-
-/* selection des inputs 1 2 et 3 */
-input:nth-of-type(1) {
-    grid-column: 2 / 3;
-    grid-row: 2 / 3;
-}
-
-input:nth-of-type(1):checked~.carousel-image {
-    --position: 1;
-}
-
-input:nth-of-type(2) {
-    grid-column: 3 / 4;
-    grid-row: 2 / 3;
-}
-
-input:nth-of-type(2):checked~.carousel-image {
-    --position: 2;
-}
-
-input:nth-of-type(3) {
-    grid-column: 4 /5;
-    grid-row: 2/ 3;
-}
-
-input:nth-of-type(3):checked~.carousel-image {
-    --position: 3;
-}
-
-.form-p-bottom {
-    text-align: center;
-}
-
-/* Couleur de fond de la section du formulaire */
-.form-evenement {
-    background-color: #F8F8F8;
-    margin-top: 30px;
-    padding: 20px 0;
-}
-
-.form-descriptif {
-    font-size: 16px;
-    margin: 0 200px 34px 225px;
-    font-family: Cambria;
-    color: #003A7E;
-}
-
-.form-main {
-    /* margin-left: 100px; */
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 250px;
-}
-
-.formLeft, .formRight{
-    width: 50%;
-}
-
-label {
-    font-size: 16px;
-}
-
-input{
-    margin-left: 28px;
-    margin-bottom: 21px;
-}
-
-input::placeholder{
-    font-style: italic;
-}
-.required {
-    color: red;
-}
-
-/* Mise en forme des labels et inputs du formulaire */
-.lastname {
-    margin-left: 98px;
-}
-
-/* .birthDay {
-    margin: 0 0 0 0;
-} */
-
-.adress {
-    margin-left: 74px;
-}
-#adress{
-    width: 300px;
-}
-
-.zipCode {
-    margin-left: 46px;
-}
-
-.email {
-    margin-left: 93px ;
-}
-
-.firstname {
-    margin: 48px 0 0 21px;
-}
-
-.town {
-    margin-left: 46px;
-}
-
-#town {
-    margin-top: 83px;
-    margin-left: 28px;
-}
-
-#telNumber{
-    width: 95px;
-}
-
-/* Centrer la touche RESERVER */
+/* Button reserver et contact */
 .button {
     text-align: center;
     margin-top: 50px;
@@ -390,6 +399,8 @@ button a {
     text-decoration: none;
 }
 
+
+/* SECTION FOOTER */
 footer {
     width: 100vw;
     height: 100px;
