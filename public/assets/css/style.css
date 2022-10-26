@@ -8,12 +8,23 @@
 html,
 body {
     max-width: 100%;
-    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Attribut d'une typographie Raleway */
+h1, h2{
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: #003A7E;
+}
+
+label{
+    font-family: Raleway, Arial, Helvetica, sans-serif;
+    color: #003A7E;
+
 }
 
 .top-section-h1 {
     font-size: 36px;
-    font-weight: bold;
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
@@ -21,9 +32,7 @@ body {
 
 .form-evenement-h2 {
     font-size: 32px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: 225px;
+    margin: 50px 0 25px 225px;
 }
 
 .map {
@@ -44,7 +53,7 @@ body {
 }
 
 .iframe-map {
-    margin: 65px auto;
+    margin: 65px 10px;
     display: flex;
     justify-content: center;
 }
@@ -54,10 +63,22 @@ body {
     display: flex;
     flex-wrap: wrap;
     background-color: #F8F8F8;
+    padding: 0 230px;
+}
+
+.img-covid{
+    width: 50%;
+    height: 250px;
+    margin-top: 65px;
+}
+
+.img-covid img{
+    width: 500px;
+    margin-left: 62px;
 }
 
 .text-infos {
-    margin: 230px;
+    width: 50%;
     margin-top: 65px;
     margin-bottom: 135px;
 }
@@ -200,70 +221,113 @@ input:nth-of-type(3):checked~.carousel-image {
     --position: 3;
 }
 
+.form-p-bottom {
+    text-align: center;
+}
+
+/* Couleur de fond de la section du formulaire */
 .form-evenement {
     background-color: #F8F8F8;
+    margin-top: 30px;
+    padding: 20px 0;
 }
 
 .form-descriptif {
     font-size: 16px;
-    margin-left: 225px;
+    margin: 0 200px 34px 225px;
     font-family: Cambria;
     color: #003A7E;
 }
 
 .form-main {
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 250px;
+}
+
+.formLeft, .formRight{
+    width: 50%;
 }
 
 label {
     font-size: 16px;
 }
 
+input{
+    margin-left: 28px;
+    margin-bottom: 21px;
+}
+
+input::placeholder{
+    font-style: italic;
+}
 .required {
     color: red;
 }
 
+/* Mise en forme des labels et inputs du formulaire */
 .lastname {
-    margin: 48px 28px 0 347px;
+    margin-left: 98px;
 }
 
-input#lastname {
-    width: 320px;
-    height: 42px;
-}
-
-lastname {}
-
-.firstname {
-    margin: 48px 28px 0 63px;
-}
-
-.birthDay {
-    margin: ;
-}
+/* .birthDay {
+    margin: 0 0 0 0;
+} */
 
 .adress {
-    margin: ;
+    margin-left: 74px;
+}
+#adress{
+    width: 300px;
 }
 
 .zipCode {
-    margin: ;
-}
-
-.town {
-    margin: ;
+    margin-left: 46px;
 }
 
 .email {
-    margin: ;
+    margin-left: 93px ;
+}
+
+.firstname {
+    margin: 48px 0 0 21px;
+}
+
+.town {
+    margin-left: 46px;
+}
+
+#town {
+    margin-top: 83px;
+    margin-left: 28px;
+}
+
+#telNumber{
+    width: 95px;
+}
+
+/* Centrer la touche RESERVER */
+.button {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
 
 
-.submit {
-    margin-left: -100px;
+button {
+    background-color: #003a7e;
+    border: none;
+    padding: 6px;
+    width: 420px;
     text-align: center;
+    font-size: 28px;
+    font-family: Arial;
+    font-weight: Bold;
+    border-radius: 25px;
 }
 
-.form-p-bottom {
-    text-align: center;
+button a {
+    color: white;
+    text-decoration: none;
 }

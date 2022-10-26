@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Mauvais Coin</title>
     <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -32,50 +35,54 @@
         </div>
     </section>
     <section class="form-evenement">
+        <h2 class="form-p-bottom">Rendez-vous le 11 novembre de 9h à 17h</h2>
         <h2 class="form-evenement-h2">Réserves ta place !</h2>
-        <p class="form-descriptif">
-            La bourse aux produits High Tech est un tout nouveau rendez-vous avec les technologies d'hier et
-            d'aujourd'hui.<br>
-            Ne t'inquiètes pas, la police municipale sera présente sur le lieu et fouillera les sacs avant de passer les
-            barrières de sécurité.</p>
+        <p class="form-descriptif h2">
+            La Mairie en partenariat avec le Campus de La Manu proporse LA bourse aux produits High Tech. Ca t’interresse ? Inscris-toi et réserve ton emplacement en remplissant le formulaire en dessous.<br>
+            Tu trouveras toutes les informations directement dans le PDF de réservation avec le QR Code qui te servira pour entrer .</p>
         <form method="get" class="form-main">
-            <div>
-                <label for="lastname" class="lastname">
+                <div class="formLeft">
+                    <label for="lastname" class="lastname">
                     Nom<span class="required">*</span>
-                </label>
-                <input type="text" id="lastname" placeholder="Nom" name="lastname" required>
-                <label for="firstname" class="firstname">
-                    Prénom<span class="required">*</span>
-                </label>
-                <input type="text" id="firstname" placeholder="Prénom" name="firstname" required><br>
-                <label for="birthDay" class="birthDay">
-                    Date de naissance<span class="required">*</span>
-                </label>
-                <input type="text" id="birthDay" placeholder="11/11/2022" name="birthDay"><br>
-                <label for="adress" class="adress">
-                    Adresse<span class="required">*</span>
-                </label>
-                <input type="text" id="adress" placeholder="70, rue des jacobins" name="adress" width="800px" required>
-                <label for="zipCode" class="zipCode">
-                    Code Postal<span class="required">*</span>
-                </label>
-                <input type="text" id="zipCode" placeholder="80000" name="zipCode" required>
-                <label for="town" class="town">
-                    Ville<span class="required">*</span>
-                </label>
-                <input type="text" id="town" placeholder="Amiens" name="town" required><br>
-                <label for="email" class="email">
-                    Email<span class="required">*</span>
-                </label>
-                <input type="email" id="email" placeholder="contact@lamanu.fr" name="email">
+                    </label>
+                    <input type="text" id="lastname" placeholder="Nom" name="lastname" required><br>
+                    <label for="birthDay" class="birthDay">
+                        Date de naissance<span class="required">*</span>
+                    </label>
+                    <input type="date" id="birthDay" name="birthDay"><br>
+                    <label for="adress" class="adress">
+                        Adresse<span class="required">*</span>
+                    </label>
+                    <input type="text" id="adress" placeholder="70, rue des jacobins" name="adress" width="800px" required><br>
+                    <label for="zipCode" class="zipCode">
+                        Code Postal<span class="required">*</span>
+                    </label>
+                    <input type="number" id="zipCode" placeholder="80000" name="zipCode" required><br>
+                    <label for="email" class="email">
+                        Email<span class="required">*</span>
+                    </label>
+                    <input type="email" id="email" placeholder="contact@lamanu.fr" name="email">
+                </div> 
+                <div class="formRight">
+                    <label for="firstname" class="firstname">
+                        Prénom<span class="required">*</span>
+                    </label>
+                    <input type="text" id="firstname" placeholder="Prénom" name="firstname" required><br>
+                    <label for="town" class="town">
+                        Ville<span class="required">*</span>
+                    </label>
+                    <input type="text" id="town" placeholder="Amiens" name="town" required><br>
+                    <label for="telNumber" class="telNumber">
+                        Téléphone<span class="required">*</span>
+                    </label>
+                    <input type="number" id="telNumber" placeholder="0986271704" name="telNumber" min="10" max="10" required>
+                </div>
+            </form>
+            <div class="button submit">
+                <button type="submit" name="submit" id="submit"><a href="#">RESERVER</a>
+                </button>
             </div>
-            <div class="submit">
-                <button type="submit" name="submit" id="submit">
-                    Reserver</button>
-            </div>
-        </form>
-        <p class="form-p-bottom">Rendez-vous le 11 novembre de 9h à 17h</p>
-    </section>
+        </section>
 
     <section class="map">
         <h2>Tu nous trouveras ici</h2>
@@ -96,19 +103,22 @@
     <section class="home-infos">
         <div class="text-infos">
             <h2>Et le covid ?</h2>
-            <p>Tu trouveras juste après les barrières à l’entrée du parking<br>
+            <p>Tu trouveras juste après les barrières<br> à l’entrée du parking
                 du gel hydroalcoolique.<br>
                 Nous t’invitons également à adopter les gestes barrières.</p>
         </div>
-        <img src="http://via.placeholder.com/560x200
-        " alt="mesure covid">
+        <div class="img-covid"><img src="public/assets/img/covid.png" alt="mesure covid">
+        </div>
     </section>
     <section class="more-infos">
         <div class="text-more-infos">
             <h2>Plus d'infos ?</h2>
             <p>Tu as d’autres questions ? N’hésites pas à nous contacter par mail. </p>
+            <div class="button">
+                <button type="submit" name="submit"><a href="#">NOUS CONTACTER</a>
+                </button>
+            </div>
         </div>
-        <button>NOUS CONTACTER</button>
     </section>
 </body>
 
