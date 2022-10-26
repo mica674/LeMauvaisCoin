@@ -35,7 +35,7 @@ h2 {
     float: left;
     width: 130px;
     height: 130px;
-    margin: auto 80px;
+    margin: 10px 80px;
 }
 
 .nav-header {
@@ -89,8 +89,7 @@ h2 {
 .nav-float {
     display: flex;
     flex-direction: column;
-    width: 65px;
-    height: calc(100% - 200px);
+    height: 100%;
     position: fixed;
     margin: 0 20px;
     justify-content: center;
