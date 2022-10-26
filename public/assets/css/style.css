@@ -389,3 +389,25 @@ button a {
     color: white;
     text-decoration: none;
 }
+
+footer {
+    width: 100vw;
+    height: 100px;
+    background-color: #003a7e;
+    text-align: center;
+}
+
+.nav-footer {
+    padding: 40px 0;
+}
+
+.nav-footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 75px;
+}
+
+.nav-footer a:hover {
+    color: #000000;
+}
