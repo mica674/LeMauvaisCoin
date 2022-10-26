@@ -95,7 +95,6 @@ h2 {
     -65px Moins la moitié de ma nav donc son milieu */
     margin: -65px 20px 0 20px;
     top: 50%;
-    background: blue;
 }
 
 .nav-float img {
