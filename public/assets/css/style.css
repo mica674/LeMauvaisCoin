@@ -89,15 +89,17 @@ h2 {
 
 /* NAVIGATION FIXER A GAUCHE DES RESEAUX SOCIAUX */
 .nav-float {
-    display: flex;
-    flex-direction: column;
-    height: 70vh;
+    height: 130px;
     position: fixed;
-    margin: 0 20px;
-    justify-content: center;
+    /* 50% je me fixe à la moitié de l'écran
+    -65px Moins la moitié de ma nav donc son milieu */
+    margin: -65px 20px 0 20px;
+    top: 50%;
+    background: blue;
 }
 
 .nav-float img {
+    display: block;
     width: 40px;
     height: 40px;
 }
