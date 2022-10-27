@@ -155,7 +155,7 @@ h2 {
 
 div.item {
     position: absolute;
-    width: 500px;
+    width: 450px;
     height: 300px;
     /* Ajout de propriétés persos */
     --r: calc(var(--position) - var(--offset));
@@ -397,6 +397,10 @@ input::placeholder {
 
 
 /* Button reserver et contact */
+.submit{
+    margin-left: 260px;
+}
+
 .button {
     text-align: center;
     margin-top: 50px;
@@ -416,7 +420,7 @@ button {
     border-radius: 25px;
 }
 
-button a {
+button a,#submit {
     color: white;
     text-decoration: none;
 }

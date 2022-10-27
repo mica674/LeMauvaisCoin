@@ -20,8 +20,8 @@
                 alt="'logo du site Ephémère"></a>
         <nav class="nav-header">
             <a href="index.html" class="home">Accueil</a>
-            <a href="revervation.html" class="nav-reservation">Reservation</a>
-            <a href="contact.html" class="nav-contact">Contact</a>
+            <a href="#form" class="nav-reservation">Reservation</a>
+            <a href="#contact" class="nav-contact">Contact</a>
         </nav>
     </header>
 
@@ -56,7 +56,7 @@
         </section>
 
         <!-- SECTION FORMULAIRE DE RESERVATION -->
-        <section class="form-evenement">
+        <section class="form-evenement" id="form">
             <h2 class="form-evenement-h2">Réserves ta place !</h2>
             <p class="form-descriptif">
                 La Mairie en partenariat avec le Campus de La Manu propose une bourse aux produits High Tech.<br>
@@ -102,12 +102,12 @@
                     <input type="number" id="telNumber" placeholder="0986271704" name="telNumber" min="10" max="10"
                         required>
                 </div>
+                <div class="button submit">
+                    <button type="submit" name="submit" id="submit"><a
+                            href="public/assets/pdf/La_Bourse_au_produits_High-Tech.pdf" target="_blank">RESERVER</a>
+                    </button>
+                </div>
             </form>
-            <div class="button submit">
-                <button type="submit" name="submit" id="submit"><a
-                        href="public/assets/pdf/La_Bourse_au_produits_High-Tech.pdf" target="_blank">RESERVER</a>
-                </button>
-            </div>
         </section>
 
         <!-- SECTION OU NOUS TROUVER -->
@@ -138,14 +138,13 @@
             <div class="img-covid"><img src="public/assets/img/covid.png" alt="mesure covid">
             </div>
         </section>
-        <section class="more-infos">
+        <section class="more-infos" id="contact">
             <div class="text-more-infos">
                 <h2>Plus d'infos ?</h2>
                 <p>Tu as d’autres questions ? N’hésite pas à nous contacter par mail. </p>
                 <div class="button">
                     <button type="submit" name="submit"><a href="https://www.amiens.fr/Liens-utiles/Nous-contacter"
-                            target="_blank">NOUS
-                            CONTACTER</a>
+                            target="_blank">NOUS CONTACTER</a>
                     </button>
                 </div>
             </div>
