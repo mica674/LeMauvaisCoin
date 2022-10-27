@@ -35,9 +35,9 @@ h2 {
 .header-logo img {
     position: absolute;
     float: left;
-    width: 100px;
-    height: 100px;
-    margin: 0px 80px;
+    width: 130px;
+    height: 130px;
+    margin: -15px 80px;
 }
 
 .nav-header {
@@ -105,6 +105,11 @@ h2 {
 
 
 /* TOP SECTION H1 ET CARROUSEL */
+.top-section {
+    height: 100%;
+    width: 100%;
+}
+
 .top-section-h1 {
     font-size: 50px;
     margin-top: 40px;
@@ -120,7 +125,7 @@ h2 {
 
 /* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
 .carousel {
-    height: 520px;
+    height: 500px;
     margin-top: 15px;
     display: grid;
     grid-template-rows: 500px 10px;
@@ -157,7 +162,7 @@ div.item {
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
     /* definition du tranform des images sur les côtés de celle principale */
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-600px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-400px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
 }
 
