@@ -12,16 +12,16 @@ body {
     font-family: Raleway, Arial, Helvetica, sans-serif;
 }
 
-l
-
 /* Attribut d'une typographie Raleway aux h1 et h2 */
 h1,
 h2 {
     font-family: Raleway, Arial, Helvetica, sans-serif;
     font-weight: bold;
-    color: #003A7E;
 }
 
+h1, h2, p{
+    color: #003A7E;
+}
 
 /* HEADER */
 .header {
@@ -305,10 +305,6 @@ input::placeholder {
 
 
 /* SECTION MAP GOOGLE */
-.map {
-    color: #003A7E;
-}
-
 .map h2 {
     font-size: 32px;
     margin-top: 85px;
@@ -361,11 +357,10 @@ input::placeholder {
 }
 
 .home-infos p {
-    font-size: 24px;
+    font-size: 16px;
 }
 
 .more-infos {
-    color: #003A7E;
     display: flex;
     flex-direction: column;
     margin: 230px;
@@ -379,7 +374,7 @@ input::placeholder {
 }
 
 .text-more-infos p {
-    font-size: 24px;
+    font-size: 16px;
     margin-bottom: 40px;
 }
 
