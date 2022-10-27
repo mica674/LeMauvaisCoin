@@ -28,16 +28,16 @@ h2 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    height: 140px;
+    height: 100px;
     background-color: #003a7e;
 }
 
 .header-logo img {
     position: absolute;
     float: left;
-    width: 130px;
-    height: 130px;
-    margin: 10px 80px;
+    width: 100px;
+    height: 100px;
+    margin: 0px 80px;
 }
 
 .nav-header {
@@ -48,9 +48,9 @@ h2 {
 .nav-header a {
     color: #FFF;
     text-decoration: none;
-    font: 25px Arial;
+    font: 20px raleway bold;
     margin: 0px 10px;
-    padding: 0 40px;
+    padding: 10px 70px;
     position: relative;
     z-index: 0;
     cursor: pointer;
@@ -106,18 +106,24 @@ h2 {
 
 /* TOP SECTION H1 ET CARROUSEL */
 .top-section-h1 {
-    font-size: 36px;
+    font-size: 50px;
     margin-top: 40px;
     margin-bottom: 20px;
     text-align: center;
+    color: #003A7E;
+}
+
+.top-section-h2 {
+    text-align: center;
+    font-size: 32px;
 }
 
 /* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
 .carousel {
     height: 520px;
-    margin: 0;
+    margin-top: 15px;
     display: grid;
-    grid-template-rows: 500px 20px;
+    grid-template-rows: 500px 10px;
     grid-template-columns: 1fr 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
@@ -151,7 +157,7 @@ div.item {
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
     /* definition du tranform des images sur les côtés de celle principale */
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-300px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-600px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
 }
 
@@ -211,10 +217,7 @@ input:nth-of-type(3):checked~.carousel-img {
     padding: 50px 0;
 }
 
-.form-h2 {
-    text-align: center;
-    font-size: 32px;
-}
+
 
 .form-evenement-h2 {
     font-size: 32px;
