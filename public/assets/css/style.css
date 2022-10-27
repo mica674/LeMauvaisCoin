@@ -111,24 +111,24 @@ h2 {
 }
 
 .top-section-h1 {
-    font-size: 50px;
-    margin-top: 40px;
-    margin-bottom: 20px;
+    font-size: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     text-align: center;
     color: #003A7E;
 }
 
 .top-section-h2 {
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
 }
 
 /* source du carrousel: https://codepen.io/onion2k/pen/xxZYBVj */
 .carousel {
-    height: 500px;
-    margin-top: 15px;
+    height: 440px;
+    margin-top: 0;
     display: grid;
-    grid-template-rows: 500px 10px;
+    grid-template-rows: 400px 10px;
     grid-template-columns: 1fr 30px 30px 30px 1fr;
     align-items: center;
     justify-items: center;
@@ -155,14 +155,14 @@ h2 {
 
 div.item {
     position: absolute;
-    width: 600px;
-    height: 400px;
+    width: 500px;
+    height: 300px;
     /* Ajout de propriétés persos */
     --r: calc(var(--position) - var(--offset));
     --abs: max(calc(var(--r) * -1), var(--r));
     transition: all 0.25s linear;
     /* definition du tranform des images sur les côtés de celle principale */
-    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-400px * var(--r)));
+    transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-450px * var(--r)));
     z-index: calc((var(--position) - var(--abs)));
 }
 
